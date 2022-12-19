@@ -1,12 +1,13 @@
 fetch('./data.json')
     .then(response => response.json())
-    .then(data => console.log(data));
+//    .then(data => console.log(data));
 //    .catch(error => console.log(error));
 
 async function fetchJson() {
     let response = await fetch('./data.json');
     let data = await response.json();
     console.log(data);
+    console.log("the first color code is " + data);
 }
 
 fetchJson();
