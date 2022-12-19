@@ -4,18 +4,15 @@ fetch('./data.json')
     })
     .then(function (json) {
         var data = json.data;
-        AssignColors();
+
+        data.forEach(function (colors) {
+            let randomnumber = Math.floor(Math.random() * 50);
+
+            document.querySelector('body').style.color = `${colors.font_colors[randomnumber]}`;
+            document.querySelector('body').style.backgroundColorcolor = `${colors.bg_colors[randomnumber]}`;
+        })
     });
 
-function AssignColors(data) {
-    let randomnumber = Math.floor(Math.random() * 50);
-    //    console.log(randomnumber);
-    //    document.querySelector('body').style.color = `${data[randomnumber]}`;
-    data.forEach(function (color) {
-        document.querySelector('body').style.color = `${color.font_colors[randomnumber]}`;
-        document.querySelector('body').style.backgroundColorcolor = `${color.bg_colors[randomnumber]}`;
-    });
-}
 
 //fetchJson();
 
