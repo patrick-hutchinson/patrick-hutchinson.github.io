@@ -3,6 +3,8 @@ fetch('./data.json')
     .then(data => console.log(data))
     .catch(error => console.log(error));
 
+console.log('the third color value is' + data[3]);
+
 
 //Separate all of the text content into separated letters
 const text = document.querySelector('.text');
