@@ -12,8 +12,8 @@ async function fetchJson() {
     let randomnumber = Math.floor(Math.random() * data.length);
     //    console.log(randomnumber);
     document.querySelector('body').style.color = `${data[randomnumber]}`;
-    console.log(data[randomnumber].font_colors[randomnumber]);
-    console.log(data[randomnumber].bg_colors[randomnumber]);
+    console.log(data.font_colors[randomnumber]);
+    console.log(data.bg_colors[randomnumber]);
 }
 
 fetchJson();
