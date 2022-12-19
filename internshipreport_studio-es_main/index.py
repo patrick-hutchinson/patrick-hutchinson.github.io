@@ -29,7 +29,10 @@ for i in range(len(headlines)):
 #print(font_colors)
 #print(bg_colors)
 
-jsonString = json.dumps(font_colors)
+d = {'data': [{'font_colors': f, 'bg_colors': b} for f, b in zip(font_colors, bg_colors)]}
+print( d )
+
+jsonString = json.dumps(d, indent=4)
 jsonFile = open("./data.json", "w")
 jsonFile.write(jsonString)
 jsonFile.close()

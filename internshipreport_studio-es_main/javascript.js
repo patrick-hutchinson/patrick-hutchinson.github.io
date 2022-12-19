@@ -10,9 +10,10 @@ async function fetchJson() {
     //    console.log("the first color code is " + data[1]);
 
     let randomnumber = Math.floor(Math.random() * data.length);
-    console.log(randomnumber);
+    //    console.log(randomnumber);
     document.querySelector('body').style.color = `${data[randomnumber]}`;
-    console.log(data[randomnumber]);
+    console.log(data[randomnumber].font_colors[randomnumber]);
+    console.log(data[randomnumber].bg_colors[randomnumber]);
 }
 
 fetchJson();
