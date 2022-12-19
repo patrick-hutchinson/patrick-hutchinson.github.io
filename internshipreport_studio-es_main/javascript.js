@@ -8,9 +8,9 @@ fetch('./data.json')
         data.forEach(function (colors) {
             let randomnumber = Math.floor(Math.random() * 50);
 
-            document.querySelector('body').style.color = `${colors.font_colors[randomnumber]}`;
-            console.log(`${colors.font_colors[randomnumber]}`);
-            document.querySelector('body').style.backgroundColorcolor = `${colors.bg_colors[randomnumber]}`;
+            document.querySelector('body').style.color = `${colors[randomnumber].font_colors}`;
+            console.log(`${colors[randomnumber].font_colors}`);
+            document.querySelector('body').style.backgroundColorcolor = `${colors[randomnumber].bg_colors}`;
         })
     });
 
