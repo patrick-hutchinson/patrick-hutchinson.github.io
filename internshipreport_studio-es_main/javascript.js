@@ -6,8 +6,13 @@ fetch('./data.json')
 async function fetchJson() {
     let response = await fetch('./data.json');
     let data = await response.json();
-    console.log(data);
-    console.log("the first color code is " + data[1]);
+    //    console.log(data);
+    //    console.log("the first color code is " + data[1]);
+
+    let randomnumber = Math.floor(Math.random() * data.length);
+    console.log(randomnumber);
+    document.querySelector('body').style.color = `${data[randomnumber]}`;
+    console.log(data[randomnumber]);
 }
 
 fetchJson();
