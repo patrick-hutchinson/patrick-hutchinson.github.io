@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "GG—Office";
+    src: url('font/Founders-Grotesk-Regular.otf');
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+    height: 100vh;
+    /*    max-height: 100vh;*/
+
+    overflow: hidden;
+
+    background: #000;
+
+    font-size: 8vw;
+    font-family: GG—Office;
+    color: #fff;
+}
+
+
+.text {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    vertical-align: top;
+    color: #BCF8B6;
+}
+
+.word_inner {
+    position: relative;
+    margin-right: 0px;
+
+    box-sizing: border-box;
+    transition: 0.2s;
+    /*    transition: opacity 0.4s ease;*/
+
+    pointer-events: none;
+}
+
+.word_inner.animated {
+    animation-iteration-count: 1;
+    top: ;
+
+    animation-name: none;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.parent_div {
+    display: inline-block;
+    text-align: center;
+    height: 100vh;
+}
+
+.footer {
+    position: absolute;
+}
+
+.contact {
+    left: 10px;
+    bottom: 0;
+}
+
+.ig {
+    right: 10px;
+    bottom: 0;
+}
+
+
+
+
+
+/*rescaling for Mobile Versions*/
+@media only screen and (max-device-width: 802px) {
+    body {
+        font-size: 6vw;
+    }
+}
