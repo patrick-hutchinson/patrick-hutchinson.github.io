@@ -1,9 +1,16 @@
+let colorcode = ;
+
 fetch('./data.json')
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error));
 
-console.log('the third color value is' + data[3]);
+async function fetchJson() {
+    let response = await fetch('/data.json');
+    let data = await response.json();
+    console.log("data from json file is" + data);
+}
+
 
 
 //Separate all of the text content into separated letters
