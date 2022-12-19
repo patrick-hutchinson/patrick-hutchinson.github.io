@@ -11,9 +11,11 @@ async function fetchJson() {
 
     let randomnumber = Math.floor(Math.random() * data.length);
     //    console.log(randomnumber);
-    document.querySelector('body').style.color = `${data[randomnumber]}`;
-    console.log(data.font_colors[randomnumber]);
-    console.log(data.bg_colors[randomnumber]);
+    //    document.querySelector('body').style.color = `${data[randomnumber]}`;
+    data.forEach(function (color) {
+        document.querySelector('body').style.color = `${color.font_colors[randomnumber]}`;
+        document.querySelector('body').style.backgroundColorcolor = `${color.bg_colors[randomnumber]}`;
+    });
 }
 
 fetchJson();
