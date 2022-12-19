@@ -1,13 +1,15 @@
 fetch('./data.json')
     .then(response => response.json())
-    //    .then(data => console.log(data))
-    .catch(error => console.log(error));
+    .then(data => console.log(data));
+//    .catch(error => console.log(error));
 
 async function fetchJson() {
     let response = await fetch('./data.json');
     let data = await response.json();
     console.log(data);
 }
+
+fetchJson();
 
 
 
