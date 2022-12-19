@@ -9,6 +9,7 @@ fetch('./data.json')
             let randomnumber = Math.floor(Math.random() * 50);
 
             document.querySelector('body').style.color = `${colors.font_colors[randomnumber]}`;
+            console.log(`${colors.font_colors[randomnumber]}`);
             document.querySelector('body').style.backgroundColorcolor = `${colors.bg_colors[randomnumber]}`;
         })
     });
