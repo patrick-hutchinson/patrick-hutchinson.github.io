@@ -7,7 +7,7 @@ async function fetchJson() {
     let response = await fetch('./data.json');
     let data = await response.json();
     console.log(data);
-    console.log("the first color code is " + data);
+    console.log("the first color code is " + data[1]);
 }
 
 fetchJson();
