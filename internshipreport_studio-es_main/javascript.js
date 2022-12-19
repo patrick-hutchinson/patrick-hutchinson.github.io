@@ -1,14 +1,13 @@
 fetch('./data.json')
-    .then(response => response.json())
-//    .then(data => console.log(data));
-//    .catch(error => console.log(error));
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        var data = json.data;
+        AssignColors();
+    });
 
-async function fetchJson() {
-    let response = await fetch('./data.json');
-    let data = await response.json();
-    //    console.log(data);
-    //    console.log("the first color code is " + data[1]);
-
+function AssignColors(data) {
     let randomnumber = Math.floor(Math.random() * data.length);
     //    console.log(randomnumber);
     //    document.querySelector('body').style.color = `${data[randomnumber]}`;
@@ -18,7 +17,7 @@ async function fetchJson() {
     });
 }
 
-fetchJson();
+//fetchJson();
 
 
 
