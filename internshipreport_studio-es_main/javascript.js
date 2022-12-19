@@ -8,7 +8,7 @@ fetch('./data.json')
     });
 
 function AssignColors(data) {
-    let randomnumber = Math.floor(Math.random() * data.length);
+    let randomnumber = Math.floor(Math.random() * 50);
     //    console.log(randomnumber);
     //    document.querySelector('body').style.color = `${data[randomnumber]}`;
     data.forEach(function (color) {
