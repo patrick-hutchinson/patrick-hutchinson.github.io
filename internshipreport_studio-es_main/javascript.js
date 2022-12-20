@@ -7,13 +7,8 @@ fetch('./data.json')
 
         data.forEach(function (colors, index, array) {
             let randomnumber = Math.floor(Math.random() * 50);
-
-            //            console.log(colors);
-            //            console.log(colors.font_colors);
-            console.log(array[1].font_colors);
-            console.log(array[12].font_colors);
-            console.log(randomnumber);
             document.querySelector('body').style.color = `${array[randomnumber].font_colors}`;
+            document.querySelector('body').style.backgroundColor = `${array[randomnumber].bg_colors}`;
             //            document.querySelector('body').style.backgroundColorcolor = `${colors[randomnumber].bg_colors}`;
         })
     });
